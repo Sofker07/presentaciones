@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section><h1>Funciones de Bases de Datos</h1></section>
+                <section>
+                    <section><h3 style="font-size: 90px;">between</h3></section>
+                    <section>
+                        <p style="font-size: 48px;">La cláusula BETWEEN se utiliza para filtrar filas en una consulta que están dentro de un rango específico de valores. Normalmente se usa en combinación con los operadores lógicos AND o NOT para definir un rango</p>
+                    </section>
+                    <section>
+                        <p style="font-size: 48px;">Por ejemplo, si tienes una tabla de empleados y deseas encontrar todos los empleados cuyos salarios estén entre $30,000 y $40,000, podrías usar la cláusula BETWEEN de la siguiente manera:</p>
+                    </section>
+                    <section>
+                        <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+                            SELECT * FROM empleados WHERE salario BETWEEN 30000 AND 40000;
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section><h3 style="font-size: 90px;">DISTINCT</h3></section>
+                    <section>
+                        <p style="font-size: 48px;">La palabra clave DISTINCT se utiliza en una consulta SELECT para eliminar las filas duplicadas de los resultados. Cuando se usa, solo se mostrará una fila para cada valor único en la columna especificada</p>
+                    </section>
+                    <section>
+                        <p style="font-size: 48px;">Por ejemplo, si tienes una tabla de clientes y deseas obtener una lista de todos los nombres de los clientes sin duplicados, puedes hacerlo de esta manera:</p>
+                    </section>
+                    <section>
+                        <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+                            SELECT DISTINCT nombre FROM clientes;
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section><h3 style="font-size: 90px;">EXTRACT</h3></section>
+                    <section>
+                        <p style="font-size: 48px;">EXTRACT es una función que se utiliza para extraer componentes de una fecha o una marca de tiempo (timestamp). Puede usarse para obtener partes específicas de una fecha, como el año, el mes, el día, la hora, el minuto, el segundo, etc. Su uso varía según el sistema de gestión de bases de datos (DBMS) que estés utilizando</p>
+                    </section>
+                    <section>
+                        <p style="font-size: 48px;">Aquí hay un ejemplo de cómo podrías usarlo para extraer el año de una fecha:</p>
+                    </section>
+                    <section>
+                        <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+                            SELECT EXTRACT(YEAR FROM fecha) FROM eventos;
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section><h3 style="font-size: 90px;">INNER</h3></section>
+                    <section>
+                        <p style="font-size: 48px;">INNER es una parte de la cláusula JOIN que se utiliza para combinar dos o más tablas en una consulta SQL. Un INNER JOIN devuelve solo las filas que tienen coincidencias en ambas tablas. En otras palabras, solo se incluyen las filas en las que hay valores correspondientes en ambas tablas</p>
+                    </section>
+                    <section>
+                        <p style="font-size: 48px;">Por ejemplo, si tienes una tabla de clientes y una tabla de pedidos, puedes usar un INNER JOIN para combinarlas y obtener información sobre los clientes que han realizado pedidos:</p>
+                    </section>
+                    <section>
+                        <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+                            SELECT clientes.nombre, pedidos.producto
+                            FROM clientes
+                            INNER JOIN pedidos ON clientes.id = pedidos.cliente_id;
+                        </code></pre>
+                    </section>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

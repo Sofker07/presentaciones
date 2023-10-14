@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section><h1>Expresiones Regulares</h1></section>
+                <section>
+                    <section><h1>¿qué son?</h1></section>
+                    <section><p style="font-size: 48px;">Son patrones de busqueda utilizados para validar y manipular cadenas de texto</p></section>
+                    <section><p style="font-size: 48px;">Estan compuestas por caracteres que literales y metacaracteres que representan clases de caracteres, repeticiones y más</p></section>
+                </section>
+                <section>
+                    <section><h1 >Validación de formatos</h1></section>
+                    <section><p style="font-size: 48px;">Una aplicación común de las expresiones regulares es la validación de formatos de datos, como direcciones de correo electrónico, números de teléfono o códigos postales</p></section>
+                    <section><p style="font-size: 48px;">Al definir un patrón de búsqueda adecuado, se puede verificar si una cadena de texto cumple con el formato esperado</p></section>
+                </section>
+                <section>
+                    <section><h1>Extracción de información</h1></section>
+                    <section><p style="font-size: 48px;">Además de la validación, las expresiones regulares permiten extraer información específica de una cadena de texto</p></section>
+                    <section><p style="font-size: 48px;">Mediante el uso de grupos de captura y metacaracteres especiales, es posible identificar y extraer partes relevantes de un texto</p></section>
+                </section>
+                <section>
+                    <section><h1>Consideraciones de Rendimiento</h1></section>
+                    <section><p style="font-size: 48px;">Aunque las expresiones regulares son poderosas, es importante tener en cuenta el rendimiento al utilizarlas</p></section>
+                    <section><p style="font-size: 48px;">Patrones complejos pueden ser costosos computacionalmente. Se deben considerar alternativas más eficientes en casos donde el rendimiento sea crítico</p></section>
+                    <section><p style="font-size: 48px;">Además, es recomendable optimizar las expresiones regulares para evitar ineficiencias</p></section>
+                </section>
+                <section>
+                    <section><h1>FIN</h1></section>
+                    <section><h2 style="font-family: monospace;">Cualquier duda con el docente</h2></section>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

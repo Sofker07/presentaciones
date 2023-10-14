@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <h1>Tipos de Datos</h1>
+                </section>
+                <section>
+                    <section>
+                        <h1>enteros</h1>
+                        <h3 style="font-family: monospace;">int</h3>
+                    </section>
+                    <section>
+                        <p style="font-size: 56px;">Representan números enteros, positivos o negativos, sin parte decimal</p><br>
+                        <p style="font-size: 48px;">Ejemplos de enteros son 1, -5, y 1000</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>punto flotante</h1>
+                        <h2 style="font-family: monospace;">float</h2>
+                    </section>
+                    <section>
+                        <p style="font-size: 56px;">Representan números con parte decimal. Los números de punto flotante pueden ser positivos o negativos</p><br>
+                        <p style="font-size: 48px;">Ejemplos de números de punto flotante son 3.14, -0.5 y 2.0</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Caracteres</h1>
+                        <h2 style="font-family: monospace;">char</h2>
+                    </section>
+                    <section>
+                        <p style="font-size: 56px;">Representan caracteres individuales, como letras, números y símbolos</p><br>
+                        <p style="font-size: 48px;">Por ejemplo, 'a', '1' y '$' son caracteres</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>cadenas de Caracteres</h1>
+                        <h2 style="font-family: monospace;">string</h2>
+                    </section>
+                    <section>
+                        <p style="font-size: 56px;">Representan secuencias de caracteres. Las cadenas se utilizan para almacenar texto</p><br>
+                        <p style="font-size: 48px;">Ejemplo: "Hola, mundo!"</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>booleanos</h1>
+                        <h2 style="font-family: monospace;">bool</h2>
+                    </section>
+                    <section>
+                        <p style="font-size: 56px;">Representan valores de verdad. Pueden ser verdaderos (true) o falsos (false).</p><br>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>listas o arreglos</h1>
+                        <h2 style="font-family: monospace;">list-array</h2>
+                    </section>
+                    <section>
+                        <p style="font-size: 56px;">Colecciones ordenadas de elementos del mismo tipo de datos. Los elementos se acceden por índice</p><br>
+                        <p style="font-size: 48px;">Ejemplos: [1, 2, 3] o ["manzana", "banana", "cereza"]</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>tuplas</h1>
+                        <h2 style="font-family: monospace;">tuple</h2>
+                    </section>
+                    <section>
+                        <p style="font-size: 56px;">Son similares a las listas, pero son inmutables, lo que significa que no se pueden modificar una vez creadas</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Conjuntos</h1>
+                        <h2 style="font-family: monospace;">set</h2>
+                    </section>
+                    <section>
+                        <p style="font-size: 56px;">Colecciones no ordenadas de elementos únicos. Se utilizan para realizar operaciones de conjuntos, como unión e intersección</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Diccionarios</h1>
+                        <h2 style="font-family: monospace;">dict</h2>
+                    </section>
+                    <section>
+                        <p style="font-size: 56px;">Almacenan pares clave-valor. Cada clave es única y se utiliza para acceder a su valor correspondiente</p>
+                    </section>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
